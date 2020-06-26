@@ -19,13 +19,13 @@ export class WidgetsController {
   @Get()
   async getWidgets() {
     const widgets = await this.widgetsService.getWidgets();    
-    return { widgets };
+    return widgets;
   }
 
   @Get(':id')
   async getWidget(@Param('id') widgetId: string) {
     const widget = await this.widgetsService.getWidget(widgetId);
-    return { widget };
+    return widget;
   }
 
   @Patch(':id')
