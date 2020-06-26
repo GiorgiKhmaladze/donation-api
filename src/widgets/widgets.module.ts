@@ -9,4 +9,4 @@ import { WidgetsService } from './widgets.service';
   controllers: [WidgetsController],
   providers: [WidgetsService],
 })
-export class ProductsModule {}
+export class WidgetsModule {}
