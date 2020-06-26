@@ -5,9 +5,11 @@ import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
 
 @Module({
-  imports: [ProductsModule, MongooseModule.forRoot('mongodb+srv://xaladzu:gisvgiti1234@test-cluster.lkhkt.gcp.mongodb.net/donation?retryWrites=true&w=majority')],
+  imports: [ProductsModule, MongooseModule.forRoot('mongodb+srv://xaladzu:gisvgiti1234@test-cluster.lkhkt.gcp.mongodb.net/donation?retryWrites=true&w=majority', {
+    useNewUrlParser: true
+  })],
 
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
