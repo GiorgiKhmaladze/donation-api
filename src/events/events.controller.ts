@@ -12,7 +12,7 @@ export class EventsController {
     @Body('imageUrl') eventImageUrl: string,
   ) {
     const generatedId = await this.eventsService.addEvent(eventTitle, eventText, eventImageUrl);
-    return { id: generatedId }
+    return { id: generatedId } 
   }
 
   @Get()
