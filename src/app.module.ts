@@ -4,10 +4,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { EventsModule } from './events/events.module';
 import { ProductsModule } from './products/products.module';
+import { UsersModule } from './users/user.module';
 import { WidgetsModule } from './widgets/widgets.module';
 
 @Module({
-  imports: [ProductsModule, WidgetsModule, EventsModule, MongooseModule.forRoot('mongodb://localhost/donation', {
+  imports: [ProductsModule, WidgetsModule, EventsModule, UsersModule, MongooseModule.forRoot('mongodb://localhost/donation', {
     useNewUrlParser: true
   })],
 
