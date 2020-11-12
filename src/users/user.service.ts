@@ -20,6 +20,11 @@ export class UsersService {
         return result.id as string;
     }
 
+    async getUserInfo(loginUserDto: LoginUserDto) {
+        const User = await this.findUserByUserName(loginUserDto.username);
+        return { id: User.id, password: User.password, username: User.username, phone: User.phone, pid: User.pid };
+    }
+
     async getUser(id: string) {
         const User = await this.findUser(id);
         return { id: User.id, password: User.password, username: User.username, phone: User.phone, pid: User.pid };
